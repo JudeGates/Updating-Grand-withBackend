@@ -1,0 +1,267 @@
+What is Creditas?
+Creditas is a decentralized peer-to-peer (P2P) lending and borrowing platform built on the Rootstock (RSK) blockchain, which is EVM-compatible and Bitcoin-secured.
+
+The platform lets users:
+
+Borrow tokens by offering collateral (ERC20 or NFT)
+
+Lend tokens to borrowers and earn interest
+
+Interact with the app using a connected wallet or email login
+
+Communicate via a decentralized chat system
+
+See live blockchain metrics, manage loans, and view balances
+
+It’s deployed on the Rootstock testnet, meaning it's a development/testing version of the app, not yet live on mainnet.
+
+How It Works (Step-by-Step)
+1. User Login / Connect Wallet
+Users log in using Web3Modal—either via MetaMask or an email-based option.
+
+The app switches to the Rootstock testnet network.
+
+2. Get Testnet Tokens
+Users get tRBTC (testnet Bitcoin tokens) from a faucet to pay gas fees.
+
+3. Borrowing Flow
+A user creates a loan request:
+
+Inputs: amount to borrow, interest rate, duration, collateral token, collateral amount
+
+The collateral is locked in the smart contract
+
+If no lender funds the loan by the deadline, borrower can withdraw their collateral
+
+4. Lending Flow
+A different user funds the loan
+
+The system locks the collateral and transfers the borrowed funds to the borrower
+
+The lender gets repaid with interest or claims the collateral if the loan defaults
+
+5. Smart Contract Logic
+Written in Solidity, the smart contracts:
+
+Handle loans, repayments, funding, and collateral claims
+
+Use ERC20 or ERC721 standards for collateral
+
+Collect service fees and send them to a treasury wallet
+
+6. Dashboard
+Shows:
+
+Wallet balances (tRBTC, ULT)
+
+Loan stats (created, funded)
+
+Platform-wide metrics: loan counts, token supplies, BTC price chart
+
+Buttons for actions like create loan, fund loan, repay, etc.
+
+7. Decentralized Chat
+Allows borrower and lender of the same loan to chat securely
+
+Uses decentralized storage (IPFS/Filebase) for future file sharing
+
+What Freelancers Should Know
+Frontend Developers
+Will work on Next.js, Tailwind CSS, and Ethers.js
+
+UI includes:
+
+Login/auth
+
+Wallet connection
+
+Forms for creating/funding loans
+
+Charts (via TradingView API)
+
+Search and pagination
+
+Chat UI and chat logic (Web3/IPFS storage)
+
+Will manage responsive design, user experience, and possibly notifications
+
+Blockchain Developers
+Will handle:
+
+Loan lifecycle in Solidity (create, fund, repay, claim)
+
+ERC20/ERC721 token integrations
+
+Security logic for collateral
+
+Contract upgrades, new features (like DAO controls or more loan types)
+
+Use Foundry for testing and OpenZeppelin libraries
+
+Key Technologies
+Solidity, Foundry, OpenZeppelin — for smart contracts
+
+Next.js, JavaScript, Tailwind CSS — for frontend
+
+Web3Modal, Ethers.js — for wallet connection
+
+PostgreSQL — for metrics and data storage
+
+Filebase/IPFS — for chat and file sharing
+
+Rootstock testnet — the blockchain environment
+
+
+1. FRONTEND UPDATE JOB (Web App UI/UX, Integrations)
+What It Does
+This part manages what users see and interact with: dashboards, buttons, wallet login, chat, loan creation forms, search, pagination, etc.
+
+Uses Next.js, Tailwind CSS, and Ethers.js to connect with the blockchain.
+
+Needed Skills
+Next.js (React framework)
+
+Tailwind CSS (for styling)
+
+JavaScript
+
+Ethers.js (Web3 integration)
+
+Web3Modal (wallet/email login)
+
+Basic PostgreSQL (optional for metrics)
+
+UI/UX improvements
+
+Estimated Fixed Price
+Basic UI/UX updates: $500 – $1,000
+
+Full redesign or new features (like notifications, charts, file uploads): $1,500 – $3,000
+
+How can you update this, in more details?
+A. UI/UX Enhancements
+Design Upgrade: Use a modern component library like Radix UI or ShadCN.
+
+Dark Mode Toggle: Add light/dark theme support using Tailwind CSS classes.
+
+Real-time Notifications: Integrate toast notifications (e.g., react-hot-toast) for transaction status.
+
+Mobile UX Optimization: Improve responsiveness for wallet connection and dashboard navigation.
+
+B. Dashboard Enhancements
+Graph/Analytics Integration: Add more charts for loan volume, default rate, interest rates, etc.
+
+Use Chart.js or Recharts with live updates.
+
+User Loan History: Filter by repaid, defaulted, active loans.
+
+C. Web3 Improvements
+Better Wallet Support:
+
+Upgrade to Wagmi or RainbowKit for more robust wallet connection.
+
+Session Persistence:
+
+Keep wallet logged in with secure session management (e.g., NextAuth.js or JWT-based custom logic).
+
+D. Accessibility & Localization
+Add multi-language support using i18n.
+
+Improve accessibility (keyboard nav, ARIA labels).
+
+2. BLOCKCHAIN UPDATE JOB (Smart Contracts)
+What It Does
+Manages the loan logic, collateral handling, repayments, funding, and security.
+
+Written in Solidity and deployed on the Rootstock testnet.
+
+Uses tools like Foundry and OpenZeppelin for development/testing.
+
+Needed Skills
+Solidity
+
+Foundry (for testing/deployment)
+
+OpenZeppelin (smart contract libraries)
+
+DeFi knowledge (loans, interest, repayment)
+
+Rootstock testnet experience
+
+Web3 security
+
+Estimated Fixed Price
+Simple logic tweaks or adding tokens: $500 – $1,500
+
+New features (loan types, improved collateral rules): $2,000 – $5,000
+
+Full contract overhaul with security review: $5,000 – $10,000
+
+Possible Frontend Updates:
+A. UI/UX Enhancements
+Design Upgrade: Use a modern component library like Radix UI or ShadCN.
+
+Dark Mode Toggle: Add light/dark theme support using Tailwind CSS classes.
+
+Real-time Notifications: Integrate toast notifications (e.g., react-hot-toast) for transaction status.
+
+Mobile UX Optimization: Improve responsiveness for wallet connection and dashboard navigation.
+
+B. Dashboard Enhancements
+Graph/Analytics Integration: Add more charts for loan volume, default rate, interest rates, etc.
+
+Use Chart.js or Recharts with live updates.
+
+User Loan History: Filter by repaid, defaulted, active loans.
+
+C. Web3 Improvements
+Better Wallet Support:
+
+Upgrade to Wagmi or RainbowKit for more robust wallet connection.
+
+Session Persistence:
+
+Keep wallet logged in with secure session management (e.g., NextAuth.js or JWT-based custom logic).
+
+D. Accessibility & Localization
+Add multi-language support using i18n.
+
+Improve accessibility (keyboard nav, ARIA labels).
+
+2. Blockchain (Smart Contract) Update
+Smart contract changes require careful planning since they affect protocol logic, token handling, and security.
+
+Possible Blockchain Updates:
+A. Protocol Logic Enhancements
+Partial Repayments: Allow borrowers to repay loans in multiple parts.
+
+Loan Rescheduling: Let borrower and lender extend loan duration (if agreed).
+
+Early Repayment Incentives: Reduce interest for early repayments.
+
+LTV (Loan-to-Value) Calculation: Dynamically adjust allowed loan amount based on collateral price via oracles (e.g., Chainlink).
+
+B. Collateral Improvements
+More Collateral Types:
+
+Add support for more ERC20 tokens, NFTs, or even LP tokens (e.g., Uniswap LPs).
+
+Collateral Valuation:
+
+Use Chainlink price feeds to enforce a minimum value threshold for collateral.
+
+C. Protocol-Level Features
+DAO Governance Integration:
+
+Use a DAO framework like OpenZeppelin Governor to manage parameter updates (fees, loan limits).
+
+Protocol Fees Update:
+
+Add flexibility to change the treasury fee via DAO vote or admin config.
+
+D. Security Enhancements
+Reentrancy Guards: Ensure all external token calls are protected with checks-effects-interactions pattern or use ReentrancyGuard.
+
+Timelocks or Emergency Withdrawals for unforeseen contract issues.
+
+Audit Prep: Update comments and use natspec for better formal verification.
